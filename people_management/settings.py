@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.companies.apps.CompaniesConfig',
+    'apps.employees.apps.EmployeesConfig',
+    'apps.departments.apps.DepartmentsConfig',
+    'apps.documents.apps.DocumentsConfig',
     'apps.overtime_registration.apps.OvertimeRegistrationConfig',
 ]
 
