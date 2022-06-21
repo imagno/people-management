@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'apps.departments.apps.DepartmentsConfig',
     'apps.documents.apps.DocumentsConfig',
     'apps.overtime_registration.apps.OvertimeRegistrationConfig',
+    'apps.core.apps.CoreConfig'
 ]
 
 MIDDLEWARE = [
