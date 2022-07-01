@@ -1,6 +1,8 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.views.generic import ListView
+
+from .models import Employee
 
 
-def home(request):
-    return HttpResponse('Hello people')
+class ListEmployees(ListView):
+    model = Employee
+    paginated_by = 12
