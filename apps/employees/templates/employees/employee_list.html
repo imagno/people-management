@@ -4,6 +4,6 @@
     List
 
     {% for employee in object_list %}
-        {{ employee }}
+        <a href="{% url 'update_employee' employee.id %}">{{ employee }}</a>
     {% endfor %}
 {% endblock %}

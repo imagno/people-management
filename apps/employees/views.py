@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, UpdateView
 
 from .models import Employee
 
@@ -12,3 +12,8 @@ class ListEmployees(ListView):
         queryset = Employee.objects.filter(company=logged_company)
 
         return queryset
+
+
+class EditEmployee(UpdateView):
+    model = Employee
+    fields = ['name', 'departments']
