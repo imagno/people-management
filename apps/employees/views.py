@@ -1,4 +1,5 @@
-from django.views.generic import ListView, UpdateView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, UpdateView, DeleteView
 
 from .models import Employee
 
@@ -17,3 +18,8 @@ class ListEmployees(ListView):
 class EditEmployee(UpdateView):
     model = Employee
     fields = ['name', 'departments']
+
+
+class DeleteEmployee(DeleteView):
+    model = Employee
+    success_url = reverse_lazy('lis-employees')
